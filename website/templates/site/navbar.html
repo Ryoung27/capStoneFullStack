@@ -1,0 +1,21 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+<nav class="nav_container">
+    <form action="{% url 'website:login' %}" method="get">
+        <input type="submit" value="Login">
+    </form>
+    <form action="{% url 'website:register' %}" method="get">
+            <input type="submit" value="Register">
+    </form>
+    {% if user.is_authenticated %}
+    <form action="{% url 'website:index' %}" method="get">
+            <input type="submit" value="Home">
+        </form>
+        <form action="{% url 'website:day_view' %}" method="get">
+            <input type="submit" value="Day">
+        </form>
+        <form action="{% url 'website:schedule_view' %}" method="get">
+            <input type="submit" value="Schedule">
+        </form>
+    {% endif %}
+</nav>

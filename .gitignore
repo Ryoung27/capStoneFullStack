@@ -1,0 +1,14 @@
+node_modules
+bower_components
+migrations
+__pycache__
+*.pyc
+bin
+obj
+*.db
+*.sqlite3
+.vscode
+.DS_Store
+website/pic_folder
+*.env
+*.frontend
